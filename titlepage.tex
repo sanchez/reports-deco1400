@@ -17,48 +17,31 @@
 \begin{minipage}{\textwidth}\begin{center}
 		\includegraphics{logo}\\\vspace{0em}
 		\huge University of Queensland\\
-		\LARGE\color{primary}\textbf{DECO1400}\color{black}\ -- Design Computing\\\vspace{2em}
-		Final Report Thingy
+		\LARGE\color{primary}\textbf{DECO1400}\color{black}\ -- Introduction to Web Design\\\vspace{2em}
+		Design Report
 \end{center}\end{minipage}
 
 \begin{tikzpicture}[remember picture,overlay,shorten >= -10pt]
 	\coordinate (aux1) at ([yshift=-15pt]current page.north east);
 	\coordinate (aux2) at ([yshift=-410pt]current page.north east);
 	\coordinate (aux3) at ([yshift=-4.5cm]current page.north east);
-	\coordinate (aux4) at ([yshift=-150pt]current page.north east);
+	\coordinate (aux4) at ([yshift=-150pt,xshift=-20pt]current page.north east);
+	\coordinate (aux5) at ([yshift=-8cm,xshift=-40pt]current page.north east);
+	\coordinate (aux6) at ([yshift=-10cm,xshift=-25pt]current page.north east);
+	\coordinate (aux7) at ([yshift=-13cm,xshift=-50pt]current page.north east);
 	
-	\begin{scope}[primary!40,line width=12pt,rounded corners=12pt]
-		\draw
-			(aux1) -- coordinate (a)
-			++(225:5) --
-			++(-45:5.1) coordinate (b);
-		\draw[shorten <= -10pt]
-			(aux3) --
-			(a) --
-			(aux1);
-		\draw[opacity=0.6,primary,shorten <= -10pt]
-			(b) --
-			++(225:2.2) --
-			++(-45:2.2);
+	\begin{scope}[primary,line width=12pt]
+		\draw[opacity=0.6] (aux1) circle (3cm);
+		\draw[opacity=0.4] (aux2) circle (2cm);
+		\draw[opacity=0.7] (aux3) circle (3.5cm);
+		\draw[opacity=0.5] (aux4) circle (2cm);
 	\end{scope}
-	\draw[purple,line width=8pt,rounded corners=8pt,shorten <= -10pt]
-		(aux4) --
-		++(225:0.8) --
-		++(-45:0.8);
-	\begin{scope}[primary!70,line width=6pt,rounded corners=8pt]
-		\draw[shorten <= -10pt]
-			(aux2) --
-			++(225:3) coordinate[pos=0.45] (c) --
-			++(-45:3.1);
-		\draw
-			(aux2) --
-			(c) --
-			++(135:2.5) --
-			++(45:2.5) --
-			++(-45:2.5) coordinate[pos=0.3] (d);
-		\draw
-			(d) -- +(45:1);
+	\begin{scope}[primary!70,line width=8pt]
+		\draw[opacity=0.7] (aux5) circle (2.5cm);
+		\draw[opacity=1] (aux6) circle (1.5cm);
+		\draw[opacity=0.8] (aux7) circle (2cm);
 	\end{scope}
+
 \end{tikzpicture}
 
 \end{center}

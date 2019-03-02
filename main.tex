@@ -1,0 +1,76 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage[margin=20mm]{geometry}
+\usepackage{calc}
+\usepackage[default]{sourcesanspro}
+\usepackage{tikz}
+\usepackage{etoolbox}
+\usepackage{hyperref}
+\usepackage[none]{hyphenat}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{fancyhdr}
+
+\usepackage{float}
+\floatplacement{figure}{H}
+
+\usepackage{xcolor}
+\definecolor{white}{HTML}{FFFFFF}
+\definecolor{black}{HTML}{000000}
+\definecolor{green}{HTML}{22ba00}
+\definecolor{orange}{HTML}{FF6138}
+\definecolor{red}{HTML}{ba0900}
+\definecolor{blue}{HTML}{0B75CB}
+\definecolor{yellow}{HTML}{EFC82B}
+\definecolor{purple}{HTML}{49075E}
+\colorlet{primary}{blue}
+\newcommand{\primary}[0]{\color{primary}}
+\newcommand{\black}[0]{\color{black}}
+
+% set the title format
+\usepackage[explicit]{titlesec}
+% \usepackage{xhfill}
+\newcommand{\vrulefill}[1]{\leavevmode\leaders\hrule height#1\hfill\kern0pt}
+\newcommand{\firstletter}[1]{\primary#1\black}
+\newcommand{\ruleafter}[1]{#1~\xrfill[.7ex]{1pt}}
+\titleformat{\section}{\bfseries\primary\Large}{\thesection}{0.75em}{#1\quad\vrulefill{0.12em}}
+\titlespacing*{\section}{0em}{3em}{0em}
+\titleformat{\subsection}{\bfseries\primary\large}{\thesubsection}{0.75em}{#1}
+\titlespacing*{\subsection}{0em}{1em}{0em}
+\def\myfirstletter#1{\primary#1\black}
+\DeclareRobustCommand{\FirstPrimaryLetter}[1]{\myfirstletter #1}
+\titleformat{\subsubsection}[hang]{\bfseries\large}{\primary\thesubsubsection}{0em}{\quad\FirstPrimaryLetter#1}
+\titlespacing*{\subsubsection}{0em}{0em}{0em}
+\setcounter{secnumdepth}{3}
+\renewcommand\contentsname{Table of Contents}
+\setlength\parindent{0pt}
+
+% set the item spacing
+\usepackage{enumitem}
+\setlist{nosep}
+
+
+\begin{document}
+	\input{titlepage}
+	\newpage
+	\pagenumbering{roman}
+	\tableofcontents
+	\newpage
+	
+	\pagestyle{fancy}\fancyhf{}
+	\lhead{}\chead{}\rhead{}
+	\lfoot{\textbf{DECO1400}}\cfoot{Daniel Fitzmaurice (\color{primary}43961229\color{black})}\rfoot{Page \thepage}
+	\renewcommand{\headrulewidth}{0.15em}
+	\renewcommand{\footrulewidth}{0.15em}
+	\renewcommand{\headrule}{\hbox to\headwidth{\black\leaders\hrule height\headrulewidth\hfill}}
+	\renewcommand{\footrule}{\hbox to\headwidth{\black\leaders\hrule height\footrulewidth\hfill}}
+	\pagenumbering{arabic}
+	
+	\section{Hello There}
+	Why hello there
+	\section{Second}
+	\subsection{SubSection}
+	\subsubsection{subby boi}
+\end{document}

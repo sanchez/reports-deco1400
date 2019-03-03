@@ -9,7 +9,7 @@
 			\Huge
 			Daniel Fitzmaurice\\
 			\vspace{1em}
-			\hfill(43961229)\\
+			\hfill(\primary 43961229\black )\\
 		\end{minipage}
 	\end{center}
 	\vspace{10em}
@@ -30,6 +30,12 @@
 	\coordinate (aux6) at ([yshift=-10cm,xshift=-25pt]current page.north east);
 	\coordinate (aux7) at ([yshift=-13cm,xshift=-50pt]current page.north east);
 	
+	\coordinate (bottom1) at ([xshift=10pt,yshift=30pt]current page.south west);
+	\coordinate (bottom2) at ([xshift=40pt]current page.south west);
+	\coordinate (bottom3) at ([xshift=120pt]current page.south west);
+	\coordinate (bottom4) at ([xshift=220pt,yshift=30pt]current page.south west);
+	\coordinate (bottom5) at ([xshift=180pt]current page.south west);
+	
 	\begin{scope}[primary,line width=12pt]
 		\draw[opacity=0.6] (aux1) circle (3cm);
 		\draw[opacity=0.4] (aux2) circle (2cm);
@@ -41,6 +47,15 @@
 		\draw[opacity=1] (aux6) circle (1.5cm);
 		\draw[opacity=0.8] (aux7) circle (2cm);
 	\end{scope}
+	
+	\begin{scope}[primary,line width=8pt]
+		\draw[opacity=0.5] (bottom1) circle (2.5cm);
+		\draw[opacity=0.6] (bottom2) circle (2cm);
+		\draw[opacity=0.3] (bottom3) circle (3.5cm);	
+		\draw[opacity=0.7] (bottom4) circle (2.5cm);
+		\draw[opacity=0.6] (bottom5) circle (2cm);
+	\end{scope}
+
 
 \end{tikzpicture}
 

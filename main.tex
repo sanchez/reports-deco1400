@@ -12,6 +12,7 @@
 \usepackage{longtable}
 \usepackage{booktabs}
 \usepackage{fancyhdr}
+\usepackage[toc]{glossaries}
 
 \usepackage{float}
 \floatplacement{figure}{H}
@@ -25,9 +26,11 @@
 \definecolor{blue}{HTML}{0B75CB}
 \definecolor{yellow}{HTML}{EFC82B}
 \definecolor{purple}{HTML}{49075E}
-\colorlet{primary}{purple}
+\colorlet{primary}{green}
 \newcommand{\primary}[0]{\color{primary}}
 \newcommand{\black}[0]{\color{black}}
+
+\usepackage[colorinlistoftodos,color=primary]{todonotes}
 
 % set the title format
 \usepackage[explicit]{titlesec}
@@ -41,8 +44,8 @@
 \titlespacing*{\subsection}{0em}{1em}{0em}
 \def\myfirstletter#1{\primary#1\black}
 \DeclareRobustCommand{\FirstPrimaryLetter}[1]{\myfirstletter #1}
-\titleformat{\subsubsection}[hang]{\bfseries\large}{\primary\thesubsubsection}{0em}{\quad\FirstPrimaryLetter#1}
-\titlespacing*{\subsubsection}{0em}{0em}{0em}
+\titleformat{\subsubsection}[hang]{\bfseries\large}{}{0em}{\quad\FirstPrimaryLetter#1}
+\titlespacing*{\subsubsection}{0em}{1em}{0em}
 \setcounter{secnumdepth}{3}
 \renewcommand\contentsname{Table of Contents}
 \setlength\parindent{0pt}
@@ -55,7 +58,7 @@
 \fancyhead{}
 \fancyhead[L]{\leftmark}
 \fancyhead[R]{\rightmark}
-\fancyhead[C]{Design Report}
+%\fancyhead[C]{Design Report}
 \fancyfoot[R]{Page\ \thepage}
 \fancyfoot[L]{DECO1400}
 \fancyfoot[C]{Daniel Fitzmaurice (\primary 43961229\black)}
@@ -64,26 +67,43 @@
 \renewcommand{\headrule}{\hbox to\headwidth{\primary\leaders\hrule height\headrulewidth\hfill}}
 \renewcommand{\footrule}{\hbox to\headwidth{\primary\leaders\hrule height\footrulewidth\hfill}}
 
+\makeglossaries
+\newacronym{api}{API}{Application Programming Interface}
+\newglossaryentry{javascript}{
+	name={JavaScript},
+	description={Browser scripting language used to provide interactive features}
+}
+\newglossaryentry{react}{
+	name={React},
+	description={JavaScript framework which utilizes the virtual DOM and component based tree structure to improve application performance and reduce code duplication}
+}
+\newglossaryentry{typescript}{
+	name={TypeScript},
+	description={Adds static type checking to JavaScript}
+}
+\newglossaryentry{smarthome}{
+	name={SmartHome},
+	description={An environment in which a series of different devices communicate and interact together to provide an end user with a more automated housing experience}
+}
 
 \begin{document}
 	\input{titlepage}
 	\newpage
 	\pagenumbering{roman}
 	\tableofcontents
+	\printglossary
+	\listoftodos
 	\newpage
 	
 	\pagestyle{fancy}
 	\pagenumbering{arabic}
 	
-	\section{In the beginning}
-	Hello there
-	
-	\chapter{Part A}
+	\chapter{Design and Details}
 	\input{intro}
 	\input{stakeholders}
 	\input{navigation}
 	
-	\chapter{Part B}
+	\chapter{Development and Implementation}
 	\input{aesthetics}
 	\input{website}
 	

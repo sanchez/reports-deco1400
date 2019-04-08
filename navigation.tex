@@ -121,11 +121,11 @@ In order to execute the card sorting, Trello was used for the physical moving of
 % What were the key things you learned from your Navigation Systems group discussion?
 % Write a brief response of your own to the guiding questions for this group discussion
 % Which navigation systems will you use in your website and why?
-A lot of the shown ``correct'' styles of navigation systems followed a similar style and placement. A lot of incorrect styles were outside the norm of having common elements. These elements are:
+A lot of the shown ``correct'' styles of navigation systems followed a similar style and placement. A lot of ``incorrect'' styles were outside the norm of having common elements. These elements are:
 \begin{itemize}
 	\item A main banner which include a general logo and quick navigation links underneath
 	\item Most of the examples also used an inner page navigation panel on the left for filtering content on the current page	
-\end{itemize}
+\end{itemize}\vspace{1em}
 Reflecting on the themes and the presentation styles used across websites that are considered good design, a similar layout will be used for this website. However slight modifications will be made to suit a scrolling storyline layout. To increase screen size and make the website appear more story like, the main logo will be reduced to be inline with the primary navigation menu. A side navigation menu will be created but it will be semi-hidden for a majority of the website and only showing itself when the mouse interacts with the shown tip.
 
 
@@ -133,10 +133,62 @@ Reflecting on the themes and the presentation styles used across websites that a
 % Draw a site map that visualises the navigation flow of your website
 % Include any internal (between pages) and external links
 % Storyboard how one of your personas will navigate your website
+\begin{figure}
+	\centering
+	\begin{tikzpicture}[node distance=2cm,thick,every node/.style={scale=0.8}]
+		\node (main) [page] {Home Page};
+		\node (menu) [menu, below of=main] {Main Navigation Bar};
+		\node (quiz) [page, right of=menu,xshift=3cm] {Quizzes Page};
+		\node (about) [page, below of=quiz] {About Page};
+		\node (refs) [page, below of=about] {References Page};
+		
+		\node (innerMenu) [menu, left of=menu,xshift=-3cm] {Inner Page Menu};
+		
+		\node (externalGit) [page, right of=refs,xshift=3cm] {Official Git Documentation};
+		
+		\node (internal) [group, fit=(main) (menu) (refs) (quiz) (about) (innerMenu),label={Internal Links},scale=1.25] {};
+		
+		\draw [arrow] (main) -- (menu);
+		\draw [arrow] (menu) -- (refs);
+		\draw [arrow] (menu) -- (quiz);
+		\draw [arrow] (menu) -- (about);
+		\draw [->] (main) -- (innerMenu);
+		\draw [->] (refs) -- (externalGit);
+		\draw [->] (main) -- node [midway,above,rotate=-22]{Take the Quiz} (quiz);
+	\end{tikzpicture}
+	\caption{Site Map Navigation}\label{fig:sitemap}
+\end{figure}
+
+\subsubsection{Site Map Navigation}
+The site map design is shown in Figure~\ref{fig:sitemap}, here the user will enter the site via the ``Home Page'' which will be the main story page. Then to navigate they can chose to navigate through the home page using the ``Inner Page Menu'' or via scrolling. The other main navigation feature will the be top bar which can be used to navigate to the other pages within the site (``Quizzes Page'', ``About Page'', ``References Page''). From these pages, the same navigation element will exist allowing the user to navigate back or to other pages as they see required.\\\\
+
+There will be small link at the bottom of the home page what will direct the user to the quizzes page, this symbolises that they have all the knowledge they require and it is time to see if they really learnt as much or need to go back through and understand it much more clearly.
+
 
 \subsection{Visual Organisation}
 % What were the key things you learned from you Visual Organisation group discussion?
 % Write a brief response of your own to the guiding questions for this group discussion
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{ubuntu}
+	\caption{Screenshot of Ubuntu Desktop webpage}\label{fig:ubuntu}
+\end{figure}
+
+The example site picked for the visual organisational layout is the Ubuntu Desktop webpage (Figure~\ref{fig:ubuntu}). This site incorporates a lot of good design choices and creates a very pleasant user experience through its choice in positioning and colors.
+
+\subsubsection{Spacing}
+The page utilises a lot of spacing around elements to signify the beginning and ending of different sections and content. And pictures are used to help create this space without making the space seem stretched out or the significance of ``white space''.
+
+\subsubsection{Colours and Fonts}
+Ubuntu has used a very basic colour palette here, simply just black and white with orange as a primary colour. The use and choice of colour has resulted in the images having a really attention drawn in factor and the text combined with the font choice, is easy and delightful to read. A user is draw to the picture foremost and then curiosity about what they are looking at draws them into the text to find out more. The styling of the text creates a calm and informal attitude which invites readers to only view the information they think is relevant.
+
+\subsubsection{Alignment and Layout}
+The webpage appears to use a three column approach where either content is split across three columns, or the image consumes two columns and text is floated left or right of the image. However due to the use of spacing, this column structure is not strict and instead boosts the appearance of a relax and informal presentation.
+
+\subsubsection{Weight}
+Ubuntu has taken a none-traditional approach to weight in web design by not so much assigning weighting to how bold or coloured the text is. Instead an approach of providing spacing and increased font size is favoured, however font weighting is still used. This primarily puts focus around the user seeing the larger text and the proceeding white space around it as a reference for the weight of a piece of text. This unique approach has provided Ubuntu with the relaxed and informal vibe that appears to be the design goal behind the entire site.
+
 
 \subsection{Interactivity and Functionality}
 % Draw wireframes for each type of page in your website (i.e. if you have 5 pages that function very similarly, you only need to draw 1 wireframe)
@@ -153,7 +205,12 @@ Reflecting on the themes and the presentation styles used across websites that a
 % Include the testing plan you developed for the activity
 % Include photos you took of the activity running
 % What feedback did you get and how did it inform your visual organisation, navigation and functionality decisions?
-\todo[inline]{Include Photo here}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\linewidth]{rainy}
+	\caption{User completing the paper prototype test}
+\end{figure}
+
 The paper prototype was broken up into the following tests:
 
 \subsubsection{Learn the Basics}
@@ -162,16 +219,19 @@ The paper prototype was broken up into the following tests:
 	\item\textbf{Watch:} If they scroll through the homepage or jump to references
 	\begin{itemize}
 		\item\textbf{Person 1:} Hovered over the code snippet. Hovered over the heading. ``Will I be looking at whitespace''
+		\item\textbf{Person 2:} Went to the about page first
 	\end{itemize}
 	\item\textbf{Ask:}
 	\begin{itemize}
-		\item ``Was it initiative to scroll	the page?''
+		\item ``Was it intuitive to scroll	the page?''
 		\begin{itemize}
-			\item\textbf{Person 1:} Yeah very initiative, but there is no menu have to scan the entire page
+			\item\textbf{Person 1:} Yeah very intuitive, but there is no menu have to scan the entire page
+			\item\textbf{Person 2:} Yes it was quite intuitive, I think that normally when someone encounters a website they would scroll down for more information. Especially when the title says getting started
 		\end{itemize}
 		\item ``Do you feel like the content is will spaced out?''
 		\begin{itemize}
 			\item\textbf{Person 1:} Yeah but vertical spacing is verging on a little too much
+			\item\textbf{Person 2:} If each section is separated then yes, otherwise separate pages might be effective
 		\end{itemize}
 	\end{itemize}
 \end{itemize}
@@ -189,14 +249,17 @@ The paper prototype was broken up into the following tests:
 		\item ``Did you feel like it was obvious there was a quiz?''
 		\begin{itemize}
 			\item\textbf{Person 1:} Yeah it was obvious because of the quiz button. Weird it was between references and about
+			\item\textbf{Person 2:} Yes because there was a heading up the top saying quiz
 		\end{itemize}
 		\item ``Was the Quiz easy to flow through?''
 		\begin{itemize}
 			\item\textbf{Person 1:} I don't know how many questions there are... Yes
+			\item\textbf{Person 2:} Yes
 		\end{itemize}
 		\item ``Do you think you would benefit from the quiz?''
 		\begin{itemize}
 			\item\textbf{Person 1:} Yes cause I know what I don't know, find out weak spots
+			\item\textbf{Person 2:} Yes because a quiz is useful to check whether the content learnt was absorbed
 		\end{itemize}
 	\end{itemize}	
 \end{itemize}
@@ -208,12 +271,14 @@ The paper prototype was broken up into the following tests:
 	\item\textbf{Watch:} If they scroll through the home page screen first or go straight to the references page
 	\begin{itemize}
 		\item\textbf{Person 1:} Went to the homepage first
+		\item\textbf{Person 2:} Went to the homepage first
 	\end{itemize}
 	\item\textbf{Ask:}
 	\begin{itemize}
 		\item ``Was it clear that there is a references overview page?''
 		\begin{itemize}
 			\item\textbf{Person 1:} Yeah but I thought it was citations, not git command references
+			\item\textbf{Person 2:} Yes there was a title at the top saying references. Title it ``git command reference''
 		\end{itemize}
 	\end{itemize}	
 \end{itemize}
@@ -228,6 +293,7 @@ The paper prototype was broken up into the following tests:
 		\item ``Did you know exactly where you wanted to go?''
 		\begin{itemize}
 			\item\textbf{Person 1:} yeah but thought about was about the page not about the person
+			\item\textbf{Person 2:} yes this was a very intuitive button
 		\end{itemize}
 	\end{itemize}	
 \end{itemize}
@@ -237,11 +303,29 @@ The paper prototype was broken up into the following tests:
 \begin{itemize}
 	\item\textbf{Do:} ``How do you update your git repo?''
 	\item\textbf{Watch:} If they navigate to the references or the home page
+	\begin{itemize}
+		\item\textbf{Person 1:} Navigated to the home page
+		\item\textbf{Person 2:} Navigated to the references page	
+	\end{itemize}
 	\item\textbf{Ask:}
 	\begin{itemize}
 		\item ``Did you know where you needed to go?''
 		\begin{itemize}
 			\item\textbf{Person 1:} Yeah I had a vague idea because I started on that page. I wouldn't if I didn't scroll the page
+			\item\textbf{Person 2:} Yes, because the references will show me all the commands I can use
 		\end{itemize}
 	\end{itemize}	
 \end{itemize}
+
+\begin{figure}
+	\centering
+	\subfloat[Paper Prototype screen of the main homepage]{
+		\includegraphics[width=0.5\textwidth,angle=-90,origin=c]{paper2}\label{fig:paper2}}
+	\qquad
+	\subfloat[Paper Prototype screen of the references page]{
+		\includegraphics[width=0.5\textwidth,angle=-90,origin=c]{paper1}\label{fig:paper1}}
+
+	\caption{Screenshots of paper prototype}
+	\label{fig:paper}
+\end{figure}
+

@@ -13,6 +13,8 @@
 \usepackage{booktabs}
 \usepackage{fancyhdr}
 \usepackage[toc]{glossaries}
+\usepackage[lofdepth,lotdepth]{subfig}
+\usepackage{graphicx}
 
 \usepackage{float}
 \floatplacement{figure}{H}
@@ -29,6 +31,13 @@
 \colorlet{primary}{orange}
 \newcommand{\primary}[0]{\color{primary}}
 \newcommand{\black}[0]{\color{black}}
+
+\usetikzlibrary{shapes.geometric, arrows, fit}
+\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=orange!30]
+\tikzstyle{page} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=primary!30, rounded corners=4pt]
+\tikzstyle{menu} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=purple!30, rounded corners=4pt]
+\tikzstyle{group} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, thick]
+\tikzstyle{arrow} = [thick,<->,>=stealth]
 
 \usepackage[colorinlistoftodos,color=primary]{todonotes}
 
@@ -73,6 +82,19 @@
     \MakeFramed{\hsize#1\advance\hsize-\width\FrameRestore}
 }
 {\endMakeFramed}
+
+\newcommand{\persona}[5]{
+	\begin{note}{#1}
+		\begin{description}
+			\item[Age:] #2
+			\item[Gender:] #3
+			\item[Goals:]
+			\item[]#4
+			\item[Pain Points:]
+			\item[]#5
+		\end{description}	
+	\end{note}
+}
 
 % set the title format
 \usepackage[explicit]{titlesec}
@@ -137,6 +159,8 @@
 	\newpage
 	\pagenumbering{roman}
 	\tableofcontents
+	\listoffigures
+	\listoftables
 	\printglossary
 	\listoftodos
 	\newpage

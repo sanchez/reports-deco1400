@@ -115,6 +115,15 @@ In order to execute the card sorting, Trello was used for the physical moving of
 	\end{leftbar}
 \end{note}
 
+\subsubsection{Summary}
+When it came to grouping the content together both Person 1 and Person 2 grouped elements together with an understanding of the level of difficulty different tags have. Since both users mentioned this first it can be assumed this is the primary concern or forefront of user thought. Person 1 also created a card group based on interactivity, Person 2 also mentioned that there are cards that are related to interactivity. Therefore is can be assumed that users are also grouping based on how much static an element is and how interactive it is.\\\\
+From these content can be broken up into three main sections:
+\begin{description}
+	\item[Main Homepage:] This page is the main area where the user will learn the basics and be interested to learn more. This site will be majority static content.
+	\item[Reference Sheet:] This page will be just a bunch of commands and the usage/description of the commands. This site will also be a static based site.
+	\item[Quizzes:] The quizzes will be used for the user to recap the knowledge they have learnt through the site. This site will be interactive and only supported on browsers which support a wide range of interactivity.
+\end{description}\vspace{1em}
+These three pages help to break up the content through the two categories identified in the card sorting. Main Homepage and Reference Sheet allow for two different difficulty levels (beginner and advanced respectively), while delivering primarily non-interactive. The Quizzes page covers all difficulty level with the user specifying what difficulty level they want to be tested on. The Quizzes page will also provide a user interactive approach where all content displayed on the screen is based on interactions made by users.
 
 
 \subsection{Navigation Systems}
@@ -130,6 +139,7 @@ Reflecting on the themes and the presentation styles used across websites that a
 
 
 \subsection{Site Map}
+% todo[inline]{Need to add more here}
 % Draw a site map that visualises the navigation flow of your website
 % Include any internal (between pages) and external links
 % Storyboard how one of your personas will navigate your website
@@ -198,6 +208,59 @@ Ubuntu has taken a none-traditional approach to weight in web design by not so m
 % - how they are designed to engage your specific target audience
 % - how they are designed to strengthen the educational content
 % - and how you think it will be implemented at this stage (HTML, CSS or JavaScript)
+
+\subsubsection{Title Page}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.9\linewidth]{wireframe/web1}	
+	\caption{Wireframe mockup of main title page}\label{fig:wtitle}
+\end{figure}
+As shown in Figure~\ref{fig:wtitle}, the title page functions primarily as a welcome screen. The background will be an opening and inviting image, as well as set the scene for the wonders that will be covered in future visits. The overall aim of this screen therefore is to get people amazed and further interested in the content being presented. The title page will serve as the first screen and scrolling down will provide the content screens as covered in Section~\ref{sec:wcontent}.
+
+\subsubsection{Main Content}\label{sec:wcontent}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.9\linewidth]{wireframe/web2}	
+	\caption{Wireframe mockup of single group of content}\label{fig:wcontent}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.9\linewidth]{wireframe/web3}
+	\caption{Wireframe mockup of a page of content with two groups}\label{fig:wcontent2}
+\end{figure}
+
+The main content will be delivered using ``card''s, these cards will contain a header and some content as well as a background and rounded corners. Figure~\ref{fig:wcontent} shows the wireframe of a content screen with some reference command at the bottom of the card. A content page may also contain two cards (one anchored at the top, and one at the bottom), as shown in Figure~\ref{fig:wcontent2}.
+
+\subsubsection{About}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.9\linewidth]{wireframe/web4}
+	\caption{Wireframe mockup of the about page}\label{fig:wabout}	
+\end{figure}
+
+The about page will be used as a way for people to find out information about the website and the author. Figure~\ref{fig:wabout} details the wireframe layout of the about page. The grey box on the right side will be used for a professional portrait photo of the author and the text on the side detailing both the author and the website. 
+
+\subsubsection{References}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.9\linewidth]{wireframe/web5}
+	\caption{Wireframe mockup of the references page}\label{fig:wreferences}	
+\end{figure}
+
+Figure~\ref{fig:wreferences} defines the wireframe for the references page. This page is the main page which users will go to for any quick information. Therefore most of the information regarding this page is placed into tables with a brief description in the rightmost column.
+
+\subsubsection{Quiz}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.9\linewidth]{wireframe/web6}
+	\caption{Wireframe mockup of the quiz page}\label{fig:wquiz}	
+\end{figure}
+
+The quiz page will primarily be used for users to test themselves and their \gls{git} knowledge, this page will be focused heavily on user interaction and provide a lot of dynamic content. Figure~\ref{fig:wquiz} shows the wireframe with two interactive controls.\\\\
+The first interactive control provides the user with the option to pick one option from a set of options. In Figure~\ref{fig:wquiz}, ``Option 2'' is selected as the users answer. Upon completion of the quiz, feedback will be provided locally to the control specifying if that particular answer is correct or incorrect.\\\\
+The second interactive control allows the user to simulate using the \gls{git} commands in an emulated environment. Therefore they are able to enter different git commands and receive input based on these commands. Due to the amount of features provided with \gls{git}, not all commands will be implemented and only the set of commands covered in the main tutorial will be implemented. Upon completion of the quiz, if the result does not match the requested result from the question the user will be prompted to attempt this question again.
+
 
 \subsection{Paper Prototyping}
 % Reflect on the success of the Paper Prototyping design activity you did in Week 6

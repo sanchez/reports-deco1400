@@ -12,14 +12,41 @@
 % - Describe any button/link treatments (e.g. hovering on a link)
 % Rationalise the design choices you've made, relating to the design principles from the lectures
 
-\subsubsection{Color Scheme}
-\cite{colors}
-% https://www.verywellmind.com/color-psychology-2795824
+\subsubsection{Colour Scheme}
+When picking a colour scheme it is important to take into consideration the effects the colours will have on people, also known as the colour psychology. Brown represents strength and reliability, meanwhile orange represents enthusiasm and attention. All of these traits are traits that are either associated with \gls{git} or can be used to maintain people's interest. Therefore the primary colour of the website is part the way between brown and orange to attempt to get a blend of these traits. Finally the primary colour also represents a gold style colour to better represent the value of using \gls{git}, since gold is associated with money and wealth.~\cite{colors}\\\\
+A secondary colour was chosen to represent calming in order to make sure that the user never got too anxious over the content being presented to them. However after user testing and evaluation it was obvious that the users did not reach a point that the colour was required.~\cite{colors}\\\\
+The background colour chosen is based on a darker shade of the primary colour, this is to help make the background a lesser focus of the content and make the content the frontmost focus of the user. This colour is meant to complement both the content background and the primary colour used in the content. The colour difference between the background and primary should be a noticeable difference but not something immediately obvious and distracting to an average consumer.\\\\
+The main goal is the use of colour between; the immediate content (headings and title blocks), the content (the main information and reason the user is visiting the page), and the background. Therefore content and colours used for the content is the blending piece between the background colour and primary colour. Another consideration for the content colours is the use of dark text or light text and the effects on readers. In order to not strain the users's eyes when reading and to enforce proper reading and not skimming, a light background with dark text approach was taken~\cite{text}. Therefore a white background with black text scheme was chosen for the content.\\\\
+An area of content my have particle highlighted areas which are of interest to readers if they are quickly scrolling or skimming through the content. These areas are of interest but should not distract from normal reading consumption. A slight grey tinge background with a medium sized margin around the highlighted content will help to ensure the content is well recognisable to quick reads but not distracting to normal readers. This grey combined with the primary colour on titles allows users to see the code block and then immediately identify the content.\\\\
+The final \gls{html} \gls{hex} codes are as follows:
+\begin{description}
+	\item[Primary:] \#A18613
+	\item[Secondary:] \#1975FF
+	\item[Background:] \#6D532D
+	\item[Content Text:] black
+	\item[Content Background:] white
+\end{description}
+
+\begin{note}{Content Colouring Code}
+	The use of ``black'' and ``white'' as the content colours allows for \gls{os} overrides to adjust the text, so if the user has any preferences that modify the default values of websites than these preferences will be applied to the content. The drawback of using this type of referencing means that there are varied results across browsers and systems.
+\end{note}
+
 \subsubsection{Font Families}
+The font chosen is an \gls{opensource} font by Adobe, Source Sans Pro. It is a sans serif based typeface and the first Adobe \gls{opensource} font family. The font is intended to be used on user interfaces. This font is easy to read and understand and allows for users to both sit down and read and quickly skim through text without strain.~\cite{font}\\\\
+A typewriter based font is used as a secondary font for identifying blocks of code within paragraphs. This font was used because of it recognition to code based fonts and terminal fonts. Therefore giving the user a sense of recognition and relationship between the content and the terminal.
+
 \subsubsection{Font Weights and Sizes}
+Font weights are used to associate the strength of a piece of text in this project. Therefore all headings and title blocks are bolded to indicate their strength and importance. With that, small little messages and indicators (which should be read but not as strong in their statement) are not bolded and instead italicised. All normal consumption of content should be of normal weighting and not italicised, this is to help put a better emphasis on the content that is different.\\\\
+Font sizing is also used to create emphasis on content, but it is also used as a slight benefit to content which is meant to appear in a smaller space and not draw too much from the user. Any slight tooltips instructing the user on how to use a new piece of content should be reduced to 80\% of the original font size, this helps to ensure the tooltip while still readable and helpful. It is not consuming up any extra space that could otherwise be utilised. An exception to this rule is a tooltip that is dismissible and only shows on a predefined user action, this exception exists because now that space is only being used temporarily as a guidance if the user requires.
+
 \subsubsection{Links}
 % hovering over a navbar link has the border-width animated. Meant to show the link "activating" on hover
-\subsubsection{Bouncing}
+Common links should be highlighted from normal content with the use of the primary color and a basic underlining. The underlining is used to draw resemblance to other stylings of links across the Internet.\\\\
+Some links however have slight variations, these links will have a hover effect where the underline will progressively get stronger across a given time. This is meant to simulate the link ``activating'', as if the link between the text and the destination webpage is getting stronger until it is fully activated.
+
+\subsubsection{Attention}
+Sometimes a possible feature is not always easily identifiable from a website and requires some way of identifying the user that there are more actions that can be done to better improve their viewing experience. This form of grabbing attention is completed through a bouncing the item very slightly. The bouncing should be smooth and not distracting from normal reading but upon scanning the entire page it should alert the user. Each individual bouncing element should also be interactive in some way, for example a docked menu can bounce and upon mousing over the menu will appear.
+
 \subsubsection{Code Blocks}
 % spaced and colored so easily caught to the eye when scrolling
 \subsubsection{Background}

@@ -178,3 +178,37 @@ How did you group the tags
 - **Ask:**
   - "Did you know where you needed to go?"
     - **Person 1:** Yeah I had a vague idea because i started on that page. I wouldn't if I didn't scroll the page
+
+
+
+# Hi-Fi Testing
+
+## Learn the basics
+
+- **DO:** Learn the basics of Git
+- **WATCH:** Do they scroll the page
+- **ASK:** Did you find the content well spaced out?
+
+## Quiz Page
+
+- **DO:** Go to the quiz page
+- **WATCH:** If they directly go to the navigation or to the bottom of the page
+- **ASK:** Was it obvious where to go?
+
+## Advanced Commands
+
+- **DO:** Find out information on the advanced command to show all branches
+- **WATCH:** Directly use the nav bar or scroll through the page
+- **ASK:** Where was your initial place to look
+
+## Terminal
+
+- **DO:** Complete quiz question 1
+- **WATCH:** If it is straight forward and obvious to use
+- **ASK:** Did you feel like the terminal lacked direction
+
+## Terminal Branching
+
+- **DO:** Try to create a branch in the sandbox
+- **WATCH:** If they have to refer back to the storyline
+- **ASK:** Do you think some hints would be good if this was to be a question
